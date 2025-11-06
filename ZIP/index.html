@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library DApp - Connect Wallet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main header with title -->
+        <header>
+            <h1>📚 Library DApp</h1>
+            <p class="subtitle">Decentralized Library Management System</p>
+        </header>
+
+        <!-- Connect wallet section -->
+        <div class="card">
+            <h2>Connect Your Wallet</h2>
+            <div class="wallet-status" id="walletStatus">
+                <p class="status-text">Connect to get started</p>
+            </div>
+            
+            <!-- Big Connect Wallet button -->
+            <button id="connectWallet" class="btn btn-primary btn-big">Connect Wallet</button>
+            
+            <!-- Connected address display -->
+            <div id="connectedAddress" class="connected-address" style="display: none;">
+                <p><strong>Connected:</strong> <span id="shortAddress"></span></p>
+            </div>
+
+            <!-- Error display toast -->
+            <div id="toast" class="toast" style="display: none;"></div>
+        </div>
+
+        <!-- Info section -->
+        <div class="card info-card">
+            <h3>About</h3>
+            <p>Connect your MetaMask wallet to access the decentralized library system.</p>
+            <ul>
+                <li>Admin: Manage books and view transactions</li>
+                <li>User: Borrow books with your membership NFT</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Load Web3.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <!-- Load main script -->
+    <script src="script.js"></script>
+</body>
+</html>

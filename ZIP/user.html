@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library DApp - User Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="user-styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header with navigation -->
+        <header class="user-header">
+            <h1>📖 User Portal</h1>
+            <button id="refreshBtn" class="btn btn-secondary">Refresh</button>
+            <button id="backBtn" class="btn btn-secondary">Back to Home</button>
+        </header>
+
+        <!-- User Profile Block -->
+        <div class="card">
+            <h2>My Profile</h2>
+            <div class="user-profile">
+                <div class="profile-info">
+                    <p><strong>Name:</strong> <span id="userName">Guest User</span></p>
+                    <p><strong>Email:</strong> <span id="userEmail">Not provided</span></p>
+                    <p><strong>Address:</strong> <span id="userAddress">0x...</span></p>
+                </div>
+                <button id="showNFTBtn" class="btn btn-primary">Show My NFT</button>
+            </div>
+
+            <!-- NFT Display -->
+            <div id="nftDisplay" class="nft-display" style="display: none;">
+                <h3>Membership NFT</h3>
+
+                <div id="nftInfo">
+                    <p><strong>Token ID:</strong> <span id="tokenId">-</span></p>
+                </div>
+
+                <!-- ✅ NFT Card Container (missing earlier) -->
+                <div id="nftCard" style="margin-top:15px;"></div>
+
+                <div id="nftQR" class="qr-container" style="margin-top:15px;"></div>
+
+                <p id="noMembership" style="display: none; color: #f44336;">Contact admin to mint membership</p>
+            </div>
+
+
+            <!-- Borrow Book Section -->
+            <div class="card">
+                <h2>Borrow a Book</h2>
+                <form id="borrowBookForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="borrowBookId">Book ID</label>
+                            <input type="number" id="borrowBookId" placeholder="Enter book ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="borrowDays">Days</label>
+                            <input type="number" id="borrowDays" placeholder="Number of days" min="1" value="7"
+                                required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Issue Book</button>
+                </form>
+            </div>
+
+            <!-- Borrowed Books Table -->
+            <div class="card">
+                <h2>My Borrowed Books</h2>
+                <button id="loadBooksBtn" class="btn btn-secondary">Refresh</button>
+                <div class="table-container">
+                    <table id="borrowedBooksTable">
+                        <thead>
+                            <tr>
+                                <th>Record ID</th>
+                                <th>Book ID</th>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Issue Date</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="borrowedBooksBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Toast Notification -->
+            <div id="toast" class="toast" style="display: none;"></div>
+
+            <!-- Fine Payment Modal -->
+            <div id="fineModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Fine Payment Required</h2>
+                    <p>You have an overdue book. Please pay the fine to return it.</p>
+                    <p><strong>Fine Amount:</strong> <span id="fineAmount">0</span> Wei</p>
+                    <button id="payFineBtn" class="btn btn-primary">Pay Fine & Return</button>
+                    <button id="cancelFineBtn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load Web3.js from CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+        <!-- Load QR library -->
+        <script src="assets/qr.js"></script>
+        <!-- Load main script -->
+        <script src="script.js"></script>
+        <!-- Load user script -->
+        <script src="user-script.js"></script>
+</body>
+
+</html>

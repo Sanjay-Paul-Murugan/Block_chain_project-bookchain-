@@ -1,0 +1,334 @@
+/* User-specific styles for the Library DApp */
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.user-header h1 {
+    color: #fff;
+    margin: 0;
+}
+
+.user-header .btn {
+    margin: 5px;
+}
+
+/* User profile block */
+.user-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info p {
+    margin: 8px 0;
+}
+
+/* NFT display */
+.nft-display {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 8px;
+}
+
+#nftInfo {
+    margin-bottom: 15px;
+}
+
+#nftInfo p {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Form rows */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+/* Table container */
+.table-container {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table th {
+    background: #667eea;
+    color: white;
+    font-weight: 600;
+}
+
+table tr:hover {
+    background: #f5f5f5;
+}
+
+/* Status badges */
+.status-active {
+    padding: 4px 12px;
+    background: #4caf50;
+    color: white;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.status-returned {
+    padding: 4px 12px;
+    background: #757575;
+    color: white;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Action buttons */
+.btn-action {
+    padding: 6px 12px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.btn-action:hover {
+    background: #45a049;
+}
+
+.btn-action-disabled {
+    padding: 6px 12px;
+    background: #ccc;
+    color: #666;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed;
+    font-size: 0.85rem;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+/* Membership card */
+.membership-info {
+    text-align: center;
+    margin-top: 10px;
+    color: #666;
+}
+
+.qr-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+#membershipQR {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Books container */
+.books-container {
+    margin-top: 20px;
+    display: grid;
+    gap: 15px;
+}
+
+.book-item {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4caf50;
+    transition: transform 0.2s;
+}
+
+.book-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.book-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.book-item strong {
+    color: #4caf50;
+}
+
+/* Available badge */
+.available-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #4caf50;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+
+/* Borrows container */
+.borrows-container {
+    margin-top: 20px;
+}
+
+.borrow-item {
+    background: #fff3e0;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 4px solid #ff9800;
+}
+
+.borrow-item h3 {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.borrow-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.borrow-item strong {
+    color: #ff9800;
+}
+
+/* Status indicators */
+.membership-status {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.membership-status.active {
+    background: #c8e6c9;
+    color: #2e7d32;
+}
+
+.membership-status.inactive {
+    background: #ffcdd2;
+    color: #c62828;
+}
+
+/* Form enhancements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Button enhancements */
+.book-action-btn {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .user-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .user-header .btn {
+        width: 100%;
+    }
+    
+    .user-profile {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .profile-info {
+        width: 100%;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    table {
+        font-size: 0.85rem;
+        min-width: 700px;
+    }
+    
+    table th,
+    table td {
+        padding: 8px;
+    }
+    
+    .books-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+}
